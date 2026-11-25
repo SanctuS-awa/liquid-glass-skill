@@ -1,0 +1,137 @@
+{
+  "optics_scene": {
+    "backend": "WebGL 2",
+    "p": 1,
+    "goal": 1,
+    "v": 0,
+    "paused": false,
+    "reduced": false,
+    "clock": 2.15,
+    "cycle": 0,
+    "box": {
+      "x": 125,
+      "y": 130,
+      "ww": 414,
+      "hh": 208,
+      "r": 33
+    },
+    "size": [
+      663,
+      462
+    ]
+  },
+  "interrupted": [
+    {
+      "backend": "WebGL 2",
+      "p": 0.9701593934823582,
+      "goal": 0,
+      "v": -2.871407849787488,
+      "paused": true,
+      "reduced": false,
+      "clock": 2.1999999999999997,
+      "cycle": 0,
+      "box": {
+        "x": 128,
+        "y": 132,
+        "ww": 407,
+        "hh": 203,
+        "r": 33
+      },
+      "size": [
+        663,
+        462
+      ]
+    },
+    {
+      "backend": "WebGL 2",
+      "p": 0.4600796922606907,
+      "goal": 1,
+      "v": 2.2189670218671034,
+      "paused": true,
+      "reduced": false,
+      "clock": 2.1999999999999997,
+      "cycle": 1,
+      "box": {
+        "x": 188,
+        "y": 172,
+        "ww": 288,
+        "hh": 125,
+        "r": 30
+      },
+      "size": [
+        663,
+        462
+      ]
+    },
+    {
+      "backend": "WebGL 2",
+      "p": 1,
+      "goal": 1,
+      "v": 0,
+      "paused": true,
+      "reduced": false,
+      "clock": 2.1999999999999997,
+      "cycle": 1,
+      "box": {
+        "x": 125,
+        "y": 130,
+        "ww": 414,
+        "hh": 208,
+        "r": 33
+      },
+      "size": [
+        663,
+        462
+      ]
+    }
+  ],
+  "reduced_motion": {
+    "backend": "WebGL 2",
+    "p": 0,
+    "goal": 0,
+    "v": 0,
+    "paused": true,
+    "reduced": true,
+    "clock": 2.1999999999999997,
+    "cycle": 1,
+    "box": {
+      "x": 241,
+      "y": 208,
+      "ww": 181,
+      "hh": 54,
+      "r": 27
+    },
+    "size": [
+      663,
+      462
+    ]
+  },
+  "phone_keys": {
+    "backend": "WebGL 2",
+    "p": 1,
+    "goal": 1,
+    "v": 0,
+    "paused": true,
+    "reduced": true,
+    "clock": 2.1999999999999997,
+    "cycle": 2,
+    "box": {
+      "x": 20,
+      "y": 77,
+      "ww": 315,
+      "hh": 190,
+      "r": 33
+    },
+    "size": [
+      354,
+      340
+    ],
+    "layout": [
+      390,
+      390
+    ],
+    "title": "none",
+    "glassText": "高光借来的颜色。"
+  },
+  "errors": []
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS NUMERIC",
+  "ratios": {
+    "B4a_fine/B3": 0.4812,
+    "B4a_main/B3": 1.0,
+    "B6_main/B3": 0.9713
+  },
+  "criteria": {
+    "L4_fine_window": true,
+    "L4_primary": true,
+    "B6_primary": true,
+    "B6_displacement": true
+  },
+  "not_evaluated": "normal-size visual inspection; L4b halo; other layers and motion"
+}
