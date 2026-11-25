@@ -1,0 +1,32 @@
+{
+  "reference": {
+    "W_px": 208,
+    "S_px": 50,
+    "fine_period_px": 14,
+    "main_bright_width_px": 24,
+    "view_px": [
+      1200,
+      785
+    ]
+  },
+  "C": {
+    "B3": {
+      "fine": 0.0994495968978992,
+      "main": 0.07933993702462032
+    },
+    "B4a": {
+      "fine": 0.0478537695605495,
+      "main": 0.07933993702462032
+    },
+    "B6": {
+      "fine": 0.04576026514621548,
+      "main": 0.0770600565137226
+    }
+  },
+  "edge_x": {
+    "B0": 140.5,
+    "B3": 129.5266435090256,
+    "B6": 129.46115326780162
+  },
+  "note": "Linear-light contrast; source and ROI coordinates fixed across stages."
+}

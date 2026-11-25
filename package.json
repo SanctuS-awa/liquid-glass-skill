@@ -1,0 +1,10 @@
+{
+  "name": "liquidglass-skill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LiquidGlass Skill: 六层液态玻璃成像规范与验收方法",
+  "license": "MIT",
+  "bin": { "liquidglass-skill": "bin/liquidglass-skill.cjs" },
+  "files": ["bin", "liquid-glass"],
+  "engines": { "node": ">=22", "npm": ">=10" }
+}
