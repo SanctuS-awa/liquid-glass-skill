@@ -1,6 +1,8 @@
-# LiquidGlass Skill 0.1 · 折光手册
+# LiquidGlass Skill 0.2 · 折光手册
 
-GlassDesk 的液态玻璃设计与验收 Skill。**0.1** 是首个对外版本（npm 包版本 **0.1.0**），沿用内部 V7.21 的光学规范。它教 AI 和开发者做一枚二维透镜：同一条背景亮纹到了边缘要拐弯，进入玻璃后可以变软，离开时还能接回去。文字在玻璃上方独立绘制，不跟着背景变形。
+GlassDesk 的液态玻璃设计与验收 Skill。**0.2**（离线 npm 包 **0.2.0**）补齐实际取样的折射验收、独立内暗边，以及第四层的边缘扩散验收。原有 [v0.1.0](https://github.com/SanctuS-awa/liquid-glass-skill/tree/v0.1.0) 标签保留。它教 AI 和开发者做一枚二维透镜：同一条背景亮纹到了边缘要拐弯，进入玻璃后可以变软，离开时还能接回去。文字在玻璃上方独立绘制，不跟着背景变形。
+
+**下面的动图和网页是 0.1 历史演示，不代表通过 0.2 新增闸门。**
 
 ![折光手册网页动图：同一块玻璃收成胶囊，再原地展开，依次介绍折射、模糊与高光](media/specimen.gif)
 
@@ -8,17 +10,17 @@ GlassDesk 的液态玻璃设计与验收 Skill。**0.1** 是首个对外版本�
 
 ## 下载与安装
 
-**一行装进 Codex：** 下载 [liquidglass-skill-0.1.0.tgz](liquidglass-skill-0.1.0.tgz)，不用解包，把它放到项目目录。用 Node.js 22+ 和 npm 10+，在该目录运行：
+**一行装进 Codex：** 下载 [liquidglass-skill-0.2.0.tgz](liquidglass-skill-0.2.0.tgz)，不用解包，把它放到项目目录。用 Node.js 22+ 和 npm 10+，在该目录运行：
 
 ```bash
-npm exec --offline --yes --package=./liquidglass-skill-0.1.0.tgz -- liquidglass-skill install
+npm exec --offline --yes --package=./liquidglass-skill-0.2.0.tgz -- liquidglass-skill install
 ```
 
 装完后新开 Codex 会话，在提示词里写 `$liquid-glass`。默认只安装到当前项目的 `.agents/skills/liquid-glass/`；希望同一个用户的所有项目都能用，在命令末尾加 `--user`。已有版本不会被覆盖。如要升级，先把旧目录移出 `skills` 保存，再运行新包的安装命令。[Codex Skills 文档](https://learn.chatgpt.com/docs/build-skills) · [npm exec 文档](https://docs.npmjs.com/cli/v11/commands/npm-exec/)
 
 **不用 npm：** 解压完整项目包，把整个 `liquid-glass/` 放进项目的 `.agents/skills/`，最终路径是 `.agents/skills/liquid-glass/SKILL.md`。只想看动画，不必安装 Skill，双击 [离线网页](直接打开-折光手册.html)。
 
-**直接联网下载：** 0.1.0 还未发布到公共 npm 仓库。目前请用上面的本地包，不要按同名包搜索安装。发布到你的 npm 命名空间后，在线安装格式是 `npx --yes @你的命名空间/liquidglass-skill@0.1.0 install`，其中命名空间要换成实际发布的名称。
+**直接联网下载：** 0.2.0 未发布到公共 npm 仓库。目前请用上面的本地包，不要按同名包搜索安装。发布到你的 npm 命名空间后，在线安装格式是 `npx --yes @你的命名空间/liquidglass-skill@0.2.0 install`，其中命名空间要换成实际发布的名称。
 
 ## 先看一根亮纹
 
@@ -37,13 +39,15 @@ npm exec --offline --yes --package=./liquidglass-skill-0.1.0.tgz -- liquidglass-
 | 从哪里判断 | 应当看见什么 |
 | --- | --- |
 | **L1–L3 · 折射** | 临近轮廓的背景沿法线被拉长，在玻璃正面向两端展开，外沿另有渐细的延展。圆角也是边。 |
-| **L4 · 扩散** | 先软化已经折射的细节，再让亮处扩散。主结构不能糊掉，前景字不能一起糊。 |
+| **L4 · 扩散** | 先软化已经折射的细节，再让边缘的亮像把自己的颜色散入附近暗部。两项分开验，不能用加亮、描边或更重的普通模糊替代。 |
 | **L5 · 高光** | 上左与下右有宽肩、亮核，另外两角收成弱丝光。即使关掉 L6，高光也要带一点附近的光色，不是等宽白线。 |
 | **L6 · 延色** | 只有折射光真正碰到高光，颜色才从接触段沿高光向两侧延开；不能染整张面。 |
 
 胶囊与面板共用同一材质规则。随着尺寸变化，影响范围可以变，不能从黑玻璃切换成白磨砂。[完整规范](liquid-glass/SKILL.md) 与 [验收协议](liquid-glass/references/acceptance.md) 分开维护。
 
 ## 为什么它不只是磨砂
+
+下表是 0.1 历史量测，不是 0.2 的验收结果。
 
 这版不是指定一个万能的「模糊几像素」，而是测**还透过了多少结构**。在这张网页展开态的同一帧，用同一批位置取样，线性亮度结果如下：
 
